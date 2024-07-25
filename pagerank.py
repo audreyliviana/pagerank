@@ -109,7 +109,7 @@ def iterate_pagerank(corpus, damping_factor):
     threshold = 0.001
 
     while True:
-        new_pagerank = {}
+        new_pagerank = {} 
         for page in corpus:
             rank = (1 - damping_factor) / N
             for p in corpus:
