@@ -16,7 +16,7 @@ def main():
     for page in sorted(ranks):
         print(f"  {page}: {ranks[page]:.4f}")
     ranks = iterate_pagerank(corpus, DAMPING)
-    print(f"PageRank Results from Iteration")
+    print(f"PageRank Results from Iteration") 
     for page in sorted(ranks):
         print(f"  {page}: {ranks[page]:.4f}")
 
