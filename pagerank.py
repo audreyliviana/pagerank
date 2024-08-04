@@ -115,6 +115,8 @@ def iterate_pagerank(corpus, damping_factor):
             for p in corpus:
                 if page in corpus[p]:
                     rank += damping_factor * pagerank[p] / len(corpus[p])
+                if not corpus[p]:
+                    rank += damping_factor * pagerank[p] / N
             new_pagerank[page] = rank
         # Check for convergence:
         if all(abs(new_pagerank[p] - pagerank[p]) < threshold for p in corpus):
